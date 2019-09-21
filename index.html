@@ -27,9 +27,9 @@ background-color: rgba(0,0,0,0.4);
 .modal-content {
 background-color: #000;
 margin: auto;
-padding: 10px;
+padding: 5px;
 border: 2px solid #111;
-width: 300px;
+width: 285px;
 -moz-border-radius:3px; 
 -khtml-border-radius:5px; 
 -webkit-border-radius:5px ; 
@@ -49,14 +49,13 @@ width:100%;
 display:none;
 }
 .selector{
-	display:none;
-	visibility: hidden;
+    display:none;
+    visibility: hidden;
 }
 #result{
 display:none;
-	visibility: hidden;
+    visibility: hidden;
 }
-
 #v{
 width:240px;
 height:240px;
@@ -111,34 +110,35 @@ blink {
 <script type="text/javascript" src="webqr.js"></script>
 </head>
 <body>
-<center>
-<button style="margin-right:0px; width: 120px;height: 35px;background: #888;border: 2px solid #999;cursor: pointer;border-radius: 2px; color: #fff;font-family: 'Open Sans', sans-serif;font-size: 16px;font-weight: bold;padding: 6px;margin-top: 360px;" id="myBtn">QR SCAN</button></center>
+<center style="background: url('scan-icon.gif') no-repeat center;"><button style="margin-right:auto; width: auto;height: 30px;background: #888;border: 2px solid #999;cursor: pointer;border-radius: 2px; color: #fff;font-family: 'Open Sans', sans-serif;font-size: 16px;font-weight: bold;padding: 5px;margin-top: 310px;" id="myBtn">Mulai Scan QR Code</button>
+</center>
 
 
 
 
 
 <div id="myModal" class="modal">
-<div class="modal-content">
-<center><span class="scanning">▒▒▒▒▒▒▒<blink> ▓ scanning ▓ </blink>▒▒▒▒▒▒▒</span></center>
-<div id="mainbody">
-<div class="selector" id="webcamimg" onclick="setwebcam()" align="left" ></div>
-<table class="tsel" border="0" width="100%">
-<td valign="top" align="center" width="100%">
-<table class="tsel" border="0">
-<td colspan="1" align="center">
-<div id="outdiv"></div>
-</td>
-</table>
-</td>
-<div id="result"></div>
-</table>
-<span class="close"></span>
-<center><span style="font-weight:bold;font-size:12px; color:#999;">Scan QR code yang ada pada vouhcer anda</span></center>
+    <div class="modal-content">
+    <center><span class="scanning">▒▒▒▒▒▒▒ <blink>▓ scanning ▓</blink> ▒▒▒▒▒▒▒</span></center>
+        <div id="mainbody">
+        <div class="selector" id="webcamimg" onclick="setwebcam()" align="left" ></div>
+            <table class="tsel" border="0" width="100%">
+                    <td valign="top" align="center" width="100%">
+                <table class="tsel" border="0"width="100%">
+                        <td colspan="1" align="center">
+                        <div id="outdiv"></div>
+                        <div id="result"></div>
+                        </td>
+                    </td>
+                </table>
+            </table>
+            <span class="close"></span>
+            <center><span style="font-weight:bold;font-size:12px; color:#999;">Scan QR code yang ada pada vouhcer anda</span></center>
+        </div>
+        <canvas id="qr-canvas" width="100%" height="100%"></canvas>
+    </div>
 </div>
-<canvas id="qr-canvas" width="100%" height="100%"></canvas>
-</div>
-</div>
+<center style="padding: 10px;font-weight:bold;font-size:12px;color:#999;">Copyright © 2019 StarConnection@anugerah.Net<br> powered by <a href="http://www.webqr.com">webqr.com</a></center>
 <script type="text/javascript">
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
